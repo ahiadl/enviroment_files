@@ -1,0 +1,72 @@
+set nocompatible "don't force vi limitations
+set t_Co=256 "256 colors
+set showmatch "show matching braces
+colorscheme koehler
+"file types
+filetype on "enable filetype detection
+
+"syntax highlighting
+"see c.vim file
+syntax on
+
+au BufNewFile,BufRead *.e setf specman
+au BufNewFile,BufRead *.log setf txt 
+
+"indentation
+set autoindent
+set smartindent
+filetype plugin indent on
+set noexpandtab "use real tabs. don't convert to whitespaces
+set tabstop=8  "tab width is 8 whitespaces
+set shiftwidth=8 "tab width is 8 whitespaces
+
+"buffer width
+"set nowrap "no fake line breaks
+"set textwidth=79 "80 char rule
+
+"guides
+set showmatch "show mathing parantheses
+set number "show line numbers
+
+"search
+set ignorecase "make search case insensitive
+set smartcase  "unless it has upper case chars
+set incsearch "incremental search
+set nohlsearch "highlight search
+set nowrapscan "don't wrap to top of buffer
+
+"minibuffer
+let g:miniBufExplMapWindowNavVim = 1
+let g:miniBufExplMapWindowNavArrows = 1
+let g:miniBufExplMapCTabSwitchBufs = 1
+let g:miniBufExplModSelTarget = 1 
+
+"others
+set showcmd "show command in status bar
+set showmode "show mode in status bar
+set undolevels=10
+
+"plugins
+au BufNewFile,BufRead *.e setf specman
+
+
+"more info in statusline
+"set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L] 
+set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%04l,%04v][%p%%]\ [LEN=%L] 
+set laststatus=2
+hi statusline term=reverse ctermbg=4
+hi statuslineNC term=reverse ctermbg=4
+"au InsertEnter * hi StatusLine term=reverse ctermbg=5 gui=undercurl guisp=Magenta
+"au InsertLeave * hi StatusLine term=reverse ctermfg=0 ctermbg=2 gui=bold,reverse
+
+"resize windows
+if bufwinnr(1)
+  "horizental
+  map <kPlus> <C-W>+
+  map <kMinus> <C-W>-
+  "vertical
+  map <kDivide> <c-w><
+  map <kMultiply> <c-w>>
+endif
+
+set term=gnome-terminal

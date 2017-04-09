@@ -1,0 +1,19 @@
+let g:miniBufExplMapWindowNavVim = 1
+let g:miniBufExplMapWindowNavArrows = 1
+let g:miniBufExplMapCTabSwitchBuffs = 1
+let g:miniBufExplModSelTarget = 1 
+let g:miniBufExplSplitBelow = 0
+let Tlist_Ctags_Cmd = '/usr/bin/ctag'
+source ~/.vim/c.vim
+source ~/.vim/minibufexpl.vim
+source ~/.vim/taglist.vim
+source ~/.vim/grep.vim
+nnoremap <silent> <F12> :TlistToggle<CR>
+map <C-Left>  :bp!<cr>
+map <C-Right>  :bn!<cr>
+colorscheme torte
+set nu
+syn on
+set tabstop=4
+set shiftwidth=4
+set expandtab

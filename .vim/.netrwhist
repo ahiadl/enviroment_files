@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/.autodirect/fwgwork/ahiadl/fwcode/galil/shared/phy'
+let g:netrw_dirhist_2='/.autodirect/fwgwork/ahiadl/fwcode/pelican/shared/phy'
+let g:netrw_dirhist_3='/.autodirect/fwgwork/ahiadl/fwcode/condor/shared/phy_edr'
+let g:netrw_dirhist_4='/.autodirect/fwgwork/ahiadl/fwcode/files/diffs'
